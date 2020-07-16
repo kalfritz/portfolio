@@ -71,13 +71,14 @@ export default function Home() {
           <h1 onClick={handleClick}>Get in touch</h1>
 
           <label for="name">Name</label>
-          <input type="text" name="name" ref={nameInputRef} />
+          <input type="text" name="name" id="name" ref={nameInputRef} />
           <label for="email">Email</label>
-          <input type="email" name="email" ref={emailInputRef} />
+          <input type="email" name="email" id="email" ref={emailInputRef} />
           <label for="message">Message</label>
           <Textarea
             type="text"
             name="message"
+            id="message"
             ref={messageInputRef}
             minRows="6"
           />
