@@ -28,9 +28,9 @@ export default function Home() {
   }
 
   const handleSubmit = () => {
-    nameInputRef && nameInputRef.current.value = ""
-    emailInputRef && emailInputRef.current.value = ""
-    messageInputRef && messageInputRef.current.value = ""
+    if (nameInputRef) nameInputRef.current.value = ""
+    if (emailInputRef) emailInputRef.current.value = ""
+    if (messageInputRef) messageInputRef.current.value = ""
   }
 
   return (
