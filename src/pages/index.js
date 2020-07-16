@@ -29,7 +29,10 @@ export default function Home() {
       <Helmet>
         <meta charSet="utf-8" />
         <title>Luiz Elias</title>
-        <link rel="canonical" href="http://mysite.com/example" />
+        <link
+          rel="canonical"
+          href="https://youthful-brahmagupta-89ab46.netlify.app/"
+        />
       </Helmet>
       <Landing id="home">
         <div>
@@ -52,14 +55,11 @@ export default function Home() {
       </Projects>
       <Contact id="contact">
         <form
-          method="post"
-          netlify-honeypot="bot-field"
-          data-netlify="true"
-          name="contact"
+          action="https://getform.io/f/2995d47a-7b93-4345-a255-44e7f63f40e8"
+          method="POST"
         >
           <h1 onClick={handleClick}>Get in touch</h1>
-          <input type="hidden" name="bot-field" />
-          <input type="hidden" name="form-name" value="contact" />
+
           <label>Name</label>
           <input type="text" name="name" ref={ref} />
           <label>Email</label>
