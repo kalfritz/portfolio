@@ -24,9 +24,7 @@ export default function Home() {
       ref.current && ref.current.focus()
     }, 1000)
   }
-  const handleSubmit = e => {
-    e.preventDefault()
-  }
+
   return (
     <Container>
       <Helmet>
@@ -60,7 +58,6 @@ export default function Home() {
         <form
           action="https://getform.io/f/2995d47a-7b93-4345-a255-44e7f63f40e8"
           method="POST"
-          onSubmit={handleSubmit}
         >
           <h1 onClick={handleClick}>Get in touch</h1>
 
