@@ -18,11 +18,19 @@ import {
 } from "./styles"
 
 export default function Home() {
-  const ref = useRef(null)
+  const nameInputRef = useRef(null)
+  const emailInputRef = useRef(null)
+  const messageInputRef = useRef(null)
   const handleClick = () => {
     setTimeout(() => {
-      ref.current && ref.current.focus()
+      nameInputRef.current && nameInputRef.current.focus()
     }, 1000)
+  }
+
+  const handleSubmit = () => {
+    nameInputRef && nameInputRef.current.value = ""
+    emailInputRef && emailInputRef.current.value = ""
+    messageInputRef && messageInputRef.current.value = ""
   }
 
   return (
@@ -58,15 +66,21 @@ export default function Home() {
         <form
           action="https://getform.io/f/2995d47a-7b93-4345-a255-44e7f63f40e8"
           method="POST"
+          onSubmit={handleSubmit}
         >
           <h1 onClick={handleClick}>Get in touch</h1>
 
-          <label>Name</label>
-          <input type="text" name="name" ref={ref} />
-          <label>Email</label>
-          <input type="email" name="email" />
-          <label>Message</label>
-          <Textarea type="text" name="message" minRows="6" />
+          <label for="name">Name</label>
+          <input type="text" name="name" ref={nameInputRef} />
+          <label for="email">Email</label>
+          <input type="email" name="email" ref={emailInputRef} />
+          <label for="message">Message</label>
+          <Textarea
+            type="text"
+            name="message"
+            ref={messageInputRef}
+            minRows="6"
+          />
           <button type="submit">Submit</button>
         </form>
         <Link to="/#home" title="Go to top">
