@@ -72,19 +72,22 @@ export default function Home() {
 
           <label for="name">Name</label>
           <input type="text" name="name" id="name" ref={nameInputRef} />
-          <label for="email" required>
-            Email
-          </label>
-          <input type="email" name="email" id="email" ref={emailInputRef} />
-          <label for="message" required>
-            Message
-          </label>
+          <label for="email">Email</label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            ref={emailInputRef}
+            required
+          />
+          <label for="message">Message</label>
           <Textarea
             type="text"
             name="message"
             id="message"
             ref={messageInputRef}
             minRows="6"
+            required
           />
           <button type="submit">Submit</button>
         </form>
