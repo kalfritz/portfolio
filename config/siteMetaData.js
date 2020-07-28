@@ -34,6 +34,27 @@ module.exports = {
       ],
     },
     {
+      url: "https://ecstatic-kowalevski-946cae.netlify.app/",
+      repo: {
+        back: null,
+        front: "https://github.com/kalfritz/pokemon-store",
+      },
+      name: "PokeStore",
+      title: "Pokemon Store",
+      description: "",
+      techs: [
+        "HTML5",
+        "Typescript",
+        "React",
+        "Hooks",
+        "Redux",
+        "Redux-Saga",
+        "Redux-Persist",
+        "styled-components",
+        "axios",
+      ],
+    },
+    {
       url: "https://quirky-euler-0b1277.netlify.app/",
       repo: {
         back: null,
@@ -42,7 +63,14 @@ module.exports = {
       name: "RocketShoes",
       title: "Shoes Store",
       description: "",
-      techs: ["HTML5", "Javascript", "React", "Redux", "styled-components"],
+      techs: [
+        "HTML5",
+        "Javascript",
+        "React",
+        "Redux",
+        "styled-components",
+        "axios",
+      ],
     },
     // {
     //   url: "https://dreamy-goodall-1fe579.netlify.app/",
