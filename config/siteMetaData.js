@@ -23,6 +23,7 @@ module.exports = {
         "Postgres",
         "Redis",
         "Sequelize",
+        "Docker",
         "Socket.io",
         "HTML5",
         "Javascript",
