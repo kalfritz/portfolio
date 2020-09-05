@@ -8,7 +8,7 @@ module.exports = {
   ],
   projects: [
     {
-      url: "https:/luppus.net",
+      url: "https://luppus.net",
       repo: {
         back: "https://github.com/kalfritz/lupus-server/",
         front: "https://github.com/kalfritz/lupus-web/",
