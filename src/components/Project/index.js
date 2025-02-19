@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from "react"
+import React, { useState } from "react"
+import { InView } from "react-intersection-observer" // Import InView component
 
 import {
   Container,
@@ -12,14 +13,14 @@ import {
 
 function Project({ project, mediaObj }) {
   const [media, setMedia] = useState('img')
+
   const handleHover = () => {
     if (!mediaObj.gif) return;
-
     setMedia('gif')
   }
+
   const handleMouseLeave = () => {
     if (!mediaObj.gif) return;
-
     setMedia('img')
   }
 
@@ -44,20 +45,29 @@ function Project({ project, mediaObj }) {
           onMouseLeave={handleMouseLeave}
           display={media === 'img' ? 'block' : 'none'}
         />
-        <Image
-          src={mediaObj.gif}
-          onMouseOver={handleHover}
-          onMouseLeave={handleMouseLeave}
-          display={media === 'gif' ? 'block' : 'none'}
-        />
+        
+        {/* Use InView to detect when the GIF is in the viewport */}
+        <InView triggerOnce={true} threshold={0.5}>
+          {({ inView, ref }) => (
+            <Image
+              ref={ref} // Attach ref to the InView component
+              src={inView ? mediaObj.gif : mediaObj.img} // Load GIF only when in view
+              onMouseOver={handleHover}
+              onMouseLeave={handleMouseLeave}
+              display={media === 'gif' ? 'block' : 'none'}
+              loading="lazy" // Enable lazy loading for the image
+            />
+          )}
+        </InView>
+        
         <Options>
           <div>
             {project.repo.front && (
-              <a href={project.repo.front} target="_blank">
+              <a href={project.repo.front} target="_blank" rel="noopener noreferrer">
                 See Code 🛠️
-              </a>)
-            }
-            <a href={project.url} target="_blank">
+              </a>
+            )}
+            <a href={project.url} target="_blank" rel="noopener noreferrer">
               See Live 🖥️
             </a>
           </div>
