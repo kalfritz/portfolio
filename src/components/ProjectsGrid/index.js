@@ -3,19 +3,17 @@ import metadata from "../../../config/siteMetaData"
 import Project from "../Project"
 import { Container } from "./styles"
 
-import feed from "../../assets/feed.jpg"
-import luppusGif from "../../assets/luppus.gif"
-import fire from "../../assets/fire.png"
+import maestro from "../../assets/maestro.png"
+import maestroGif from "../../assets/maestro.gif"
+import socihub from "../../assets/socihub.jpg"
+import socihubGif from "../../assets/socihub.gif"
+import pokestore from "../../assets/pokestore.png"
 import pokeGif from "../../assets/pokestore.gif"
-import products from "../../assets/products.png"
-import rocketshoes from "../../assets/rocketshoes.gif"
-import booklist from "../../assets/booklist.png"
 
 const map = {}
-map["Luppus"] = { img: feed, gif: luppusGif }
-map["PokeStore"] = { img: fire, gif: pokeGif }
-map["RocketShoes"] = { img: products, gif: rocketshoes }
-map["MyBookList"] = { img: booklist, gif: null }
+map["Maestro"] = { img: maestro, gif: maestroGif }
+map["SociHub"] = { img: socihub, gif: socihubGif }
+map["PokeStore"] = { img: pokestore, gif: pokeGif }
 
 function ProjectsGrid() {
   return (

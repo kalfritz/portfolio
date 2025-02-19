@@ -6,6 +6,7 @@ export const Container = styled.div`
   padding: 10px 15px 5px 15px;
   background: #fff;
   border-bottom: 15px solid #6159c1;
+  border-radius: 5px;
 
   @media (max-width: 1200px) {
     width: 60%;
@@ -26,6 +27,14 @@ export const Container = styled.div`
     width: 100%;
   }
 `
+
+export const Header = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 7.5px;
+`;
+
 export const MediaBox = styled.div`
   border: 1px solid #333;
   border-top: none;
@@ -72,4 +81,8 @@ export const Options = styled.div`
     }
   }
 `
-export const Description = styled.div``
+export const Description = styled.div`
+  margin-top: 2.5px;
+  margin-bottom: 10px;
+  font: 0.9rem "Roboto", sans-serif;
+`

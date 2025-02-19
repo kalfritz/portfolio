@@ -1,6 +1,6 @@
 import React from "react"
 
-import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa"
+import { FaGithub, FaLinkedin } from "react-icons/fa"
 import { MdEmail } from "react-icons/md"
 
 import { Container, A } from "./styles"
@@ -19,9 +19,6 @@ function SocialLinks({ color, marginX }) {
         <FaLinkedin size={30} color={color} />
       </A>
 
-      <A href="https://twitter.com/kalfritz" target="_blank" marginX={marginX}>
-        <FaTwitter size={30} color={color} />
-      </A>
       <A
         href="mailto:luizeliasceem@gmail.com"
         target="_blank"

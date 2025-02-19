@@ -2,8 +2,8 @@ import React, { useState, useEffect } from "react"
 
 import {
   Container,
+  Header,
   MediaBox,
-  Media,
   Techs,
   Options,
   Description,
@@ -20,9 +20,13 @@ function Project({ project, mediaObj }) {
 
   return (
     <Container>
-      <h1>
-        {project.name} - {project.title}
-      </h1>
+      <Header>
+        <h1>{project.name} - {project.title}</h1>
+        <h2>{project.titleDescription}</h2>
+      </Header>
+      <Description>
+        <p>{project.description}</p>
+      </Description>
       <Techs>
         {project.techs.map(tech => (
           <span key={tech}>{tech}</span>
@@ -36,18 +40,17 @@ function Project({ project, mediaObj }) {
         />
         <Options>
           <div>
-            <a href={project.repo.front} target="_blank">
-              See Code
-            </a>
+            {project.repo.front && (
+              <a href={project.repo.front} target="_blank">
+                See Code 🛠️
+              </a>)
+            }
             <a href={project.url} target="_blank">
-              See Project
+              See Live 🖥️
             </a>
           </div>
         </Options>
       </MediaBox>
-      <Description>
-        <p>{project.description}</p>
-      </Description>
     </Container>
   )
 }

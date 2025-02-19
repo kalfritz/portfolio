@@ -14,40 +14,14 @@ module.exports = {
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-mailgo",
     "gatsby-plugin-sitemap",
-    // {
-    //   resolve: `gatsby-plugin-manifest`,
-    //   options: {
-    //     name: `GatsbyJS`,
-    //     short_name: `GatsbyJS`,
-    //     start_url: `/`,
-    //     background_color: `#f7f0eb`,
-    //     theme_color: `#a2466c`,
-    //     display: `standalone`,
-    //     //icon in 512x512px png
-    //   },
-    // },
-    // {
-    //   resolve: `gatsby-plugin-nprogress`,
-    //   options: {
-    //     color: `tomato`,
-    //     showSpinner: false,
-    //   },
-    // },
-    // {
-    //   resolve: `gatsby-plugin-google-analytics`,
-    //   options: {
-    //     trackingId: "YOUR_GOOGLE_ANALYTICS_TRACKING_ID",
-    //   },
-    // },
     {
-      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      resolve: `gatsby-plugin-google-fonts`,
       options: {
         fonts: [
-          {
-            family: `Roboto`,
-            variants: [`300`, "500", "700"],
-          },
+          `roboto\:400,700`,
+          `open sans\:400,700`
         ],
+        display: "swap",
       },
     },
     {

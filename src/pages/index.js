@@ -37,10 +37,10 @@ export default function Home() {
     <Container>
       <Helmet>
         <meta charSet="utf-8" />
-        <title>Luiz Elias</title>
+        <title>Luiz Ramos</title>
         <link
           rel="canonical"
-          href="https://youthful-brahmagupta-89ab46.netlify.app/"
+          href="https://luizramos.dev"
         />
       </Helmet>
       <Landing id="home">
@@ -48,7 +48,7 @@ export default function Home() {
           <h1>
             Hi. I'm <span>Luiz</span>.
           </h1>
-          <h2>I am a fullstack web developer.</h2>
+          <h2>I am a Software Engineer.</h2>
           <SocialLinks color="#000" marginX="5" />
         </div>
         <LinkGetInTouch to="/#contact" onClick={handleClick}>
@@ -97,7 +97,7 @@ export default function Home() {
       </Contact>
       <Footer>
         <SocialLinks color="#fff" marginX="10" />
-        <p>Made with Gatsby and hosted on Netlify ❤️</p>
+        <p>Made with Gatsby and hosted on Vercel ❤️</p>
       </Footer>
     </Container>
   )
