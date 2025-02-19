@@ -27,11 +27,11 @@ export default function Home() {
     }, 1000)
   }
 
-  const handleSubmit = () => {
-    if (nameInputRef) nameInputRef.current.value = ""
-    if (emailInputRef) emailInputRef.current.value = ""
-    if (messageInputRef) messageInputRef.current.value = ""
-  }
+  // const handleSubmit = () => {
+  //   if (nameInputRef) nameInputRef.current.value = ""
+  //   if (emailInputRef) emailInputRef.current.value = ""
+  //   if (messageInputRef) messageInputRef.current.value = ""
+  // }
 
   return (
     <Container>
@@ -66,7 +66,6 @@ export default function Home() {
         <form
           action="https://getform.io/f/2995d47a-7b93-4345-a255-44e7f63f40e8"
           method="POST"
-          onSubmit={handleSubmit}
         >
           <h1 onClick={handleClick}>Get in touch</h1>
 
