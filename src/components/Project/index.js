@@ -7,15 +7,20 @@ import {
   Techs,
   Options,
   Description,
+  Image,
 } from "./styles"
 
 function Project({ project, mediaObj }) {
-  const [media, setMedia] = useState(mediaObj.img)
+  const [media, setMedia] = useState('img')
   const handleHover = () => {
-    if (mediaObj.gif) setMedia(mediaObj.gif)
+    if (!mediaObj.gif) return;
+
+    setMedia('gif')
   }
   const handleMouseLeave = () => {
-    if (mediaObj.gif) setMedia(mediaObj.img)
+    if (!mediaObj.gif) return;
+
+    setMedia('img')
   }
 
   return (
@@ -33,10 +38,17 @@ function Project({ project, mediaObj }) {
         ))}
       </Techs>
       <MediaBox>
-        <img
-          src={media}
+        <Image
+          src={mediaObj.img}
           onMouseOver={handleHover}
           onMouseLeave={handleMouseLeave}
+          display={media === 'img' ? 'block' : 'none'}
+        />
+        <Image
+          src={mediaObj.gif}
+          onMouseOver={handleHover}
+          onMouseLeave={handleMouseLeave}
+          display={media === 'gif' ? 'block' : 'none'}
         />
         <Options>
           <div>

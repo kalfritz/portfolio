@@ -46,6 +46,10 @@ export const MediaBox = styled.div`
   }
   margin-bottom: 10px;
 `
+export const Image = styled.img`
+  display: ${props => props.display};
+`;
+
 export const Techs = styled.div`
   display: flex;
   flex-direction: row;
