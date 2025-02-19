@@ -1,5 +1,5 @@
 module.exports = {
-  title: `Luiz Ramos`,
+  title: `Luiz Ramos | Portfolio`,
   siteUrl: `https://www.gatsbyjs.org`,
   description: `Luiz Ramos' Portfolio`,
   social: [
