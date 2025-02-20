@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import { InView } from "react-intersection-observer" // Import InView component
+import { InView } from "react-intersection-observer"
 
 import {
   Container,
@@ -9,23 +9,26 @@ import {
   Options,
   Description,
   Image,
+  Video,
 } from "./styles"
 
 function Project({ project, mediaObj }) {
-  const [media, setMedia] = useState('img')
+  const [media, setMedia] = useState('image')
 
   const handleHover = () => {
-    if (!mediaObj.gif) return;
-    setMedia('gif')
+    if (!mediaObj.video) return;
+    setMedia('video')
   }
 
   const handleMouseLeave = () => {
-    if (!mediaObj.gif) return;
-    setMedia('img')
+    setMedia('image')
   }
 
   return (
-    <Container>
+    <Container
+      onMouseOver={handleHover} 
+      onMouseLeave={handleMouseLeave}
+    >
       <Header>
         <h1>{project.name} - {project.title}</h1>
         <h2>{project.titleDescription}</h2>
@@ -41,25 +44,19 @@ function Project({ project, mediaObj }) {
       <MediaBox>
         <Image
           src={mediaObj.img}
-          onMouseOver={handleHover}
-          onMouseLeave={handleMouseLeave}
-          display={media === 'img' ? 'block' : 'none'}
+          display={media === 'image' ? 'block' : 'none'}
         />
-        
-        {/* Use InView to detect when the GIF is in the viewport */}
-        <InView triggerOnce={true} threshold={0.5}>
-          {({ inView, ref }) => (
-            <Image
-              ref={ref} // Attach ref to the InView component
-              src={inView ? mediaObj.gif : mediaObj.img} // Load GIF only when in view
-              onMouseOver={handleHover}
-              onMouseLeave={handleMouseLeave}
-              display={media === 'gif' ? 'block' : 'none'}
-              loading="lazy" // Enable lazy loading for the image
-            />
-          )}
-        </InView>
-        
+        {mediaObj.video ? (
+          <Video
+            src={mediaObj.video}
+            autoPlay
+            loop
+            muted
+            playsInline
+            display={media === 'video' ? 'block' : 'none'}
+          />
+          ) : null
+        }
         <Options>
           <div>
             {project.repo.front && (

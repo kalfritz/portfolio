@@ -4,9 +4,9 @@ import Project from "../Project"
 import { Container } from "./styles"
 
 const map = {
-  "Maestro": { img: "/maestro.png", gif: "/maestro.gif" },
-  "SociHub": { img: "/socihub.jpg", gif: "/socihub.gif" },
-  "PokeStore": { img: "/pokestore.png", gif: "/pokestore.gif" }
+  "Maestro": { img: "/maestro.webp", video: "/maestro.mp4" },
+  "SociHub": { img: "/socihub.webp", video: "/socihub.mp4" },
+  "PokeStore": { img: "/pokestore.webp", video: "/pokestore.mp4" }
 };
 
 function ProjectsGrid() {

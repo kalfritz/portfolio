@@ -37,17 +37,26 @@ export const Header = styled.div`
 
 export const MediaBox = styled.div`
   border: 1px solid #333;
-  border-top: none;
+
   padding: 0px 0px 5px 0px;
-  img {
-    height: 100%;
-    width: 100%;
-    border-bottom: 1px solid #333;
-  }
   margin-bottom: 10px;
+  aspect-ratio: 16 / 9;
 `
 export const Image = styled.img`
   display: ${props => props.display};
+
+  height: 100%;
+  width: 100%;
+  border-bottom: 1px solid #333;
+`;
+
+export const Video = styled.video`
+  display: ${props => props.display};
+
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-bottom: 1px solid #333;
 `;
 
 export const Techs = styled.div`
@@ -65,6 +74,8 @@ export const Techs = styled.div`
     margin-bottom: 5px;
   }
 `
+
+
 export const Options = styled.div`
   display: flex;
   justify-content: center;
