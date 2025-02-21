@@ -1,4 +1,5 @@
 import React from 'react'
+import { Analytics } from "@vercel/analytics/react"
 import { Helmet } from 'react-helmet'
 
 const Layout = ({ children }) => (
@@ -11,6 +12,7 @@ const Layout = ({ children }) => (
       />
     </Helmet>
     <main>{children}</main>
+    <Analytics />
   </>
 )
 
