@@ -15,7 +15,6 @@
   },
   "dependencies": {
     "@mdx-js/util": "^2.0.0",
-    "@vercel/analytics": "^1.5.0",
     "babel-plugin-styled-components": "^1.10.7",
     "gatsby": "^2.23.10",
     "gatsby-plugin-google-analytics": "^2.3.6",
